@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8">
+<button id="buscar">Carregar jogos</button>
+<pre id="resultado"></pre>
+<script>
+    document.querySelector('#buscar').onclick = () => {
+        const pedido = new XMLHttpRequest();
+        pedido.onload = () => {
+            document.querySelector('#resultado').textContent =
+                pedido.status === 200 ? pedido.responseText : 'Erro!';
+        };
+        pedido.open('GET', 'jogos.json');
+        pedido.send();
+    };
+</script></html>

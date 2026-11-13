@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<title>JSON em JavaScript</title>
+<pre id="saida"></pre>
+<script>
+    const jogo = { nome: 'Celeste', ano: 2018 };
+    const texto = JSON.stringify(jogo);
+    const copia = JSON.parse(texto);
+    document.querySelector('#saida').textContent =
+        `${texto}\nNome: ${copia.nome}`;
+</script>
+</html>

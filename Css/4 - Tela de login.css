@@ -1,0 +1,90 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#171923, #292d3e);
+}
+
+.caixa_login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 34, 48, 0.85);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.caixa_login h2 {
+    margin: 0 0 30px;
+    color: rgb(167, 139, 250);
+    text-align: center;
+}
+
+.caixa_login .caixa_usuario {
+    position: relative;
+}
+
+.caixa_login input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #77798a;
+    outline: none;
+    background: transparent;
+}
+
+.caixa_login label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(153, 147, 184);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.caixa_login input:focus ~ label,
+.caixa_login input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.caixa_login .enviar, .caixa_login .esqueceu_senha {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    color: rgb(67, 95, 170);
+}
+
+.caixa_login .enviar:hover {
+    background: #a78bfa;
+    color: #fff;
+    box-shadow:  0 0 2px #a78bfa;
+}
+
+.caixa_login .esqueceu_senha:hover {
+    background: #b63a3a;
+    color: rgb(202, 134, 134);
+    box-shadow: 0 0 5px #eb4e4e, 
+}

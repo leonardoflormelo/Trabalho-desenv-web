@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8">
+<button id="buscar">Mostrar jogos</button>
+<ul id="lista"></ul>
+<script>
+    document.querySelector('#buscar').onclick = async () => {
+        const resposta = await fetch('jogos.json');
+        if (!resposta.ok) throw new Error('Falha no HTTP');
+        const jogos = await resposta.json();
+        const lista = document.querySelector('#lista');
+        lista.replaceChildren();
+        jogos.forEach(j => {
+            const item = document.createElement('li');
+            item.textContent = j.nome;
+            lista.append(item);
+        });
+    };
+</script></html>
