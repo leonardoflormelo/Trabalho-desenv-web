@@ -1,0 +1,1 @@
+integração entre front-end e back-end através de um formulário HTML que envia dados via método POST para um script PHP, que valida o método da requisição, verifica se o campo obrigatório foi preenchido e previne a entrada de scripts inserido por usuarios
